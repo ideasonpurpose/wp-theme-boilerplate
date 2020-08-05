@@ -61,7 +61,7 @@ add_action('after_setup_theme', function () {
  * Register Sidebars and disable default widgets
  */
 add_action('widgets_init', function () {
-    register_sidebar();
+    // register_sidebars();
 
     unregister_widget('WP_Nav_Menu_Widget');
     unregister_widget('WP_Widget_Archives');
