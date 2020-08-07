@@ -1,6 +1,5 @@
-
-<!-- START template-parts/components/favicon.php -->
+<!-- START template-parts/favicon.php -->
 
 <!-- use https://realfavicongenerator.net/  -->
 
-<!-- END template-parts/components/favicon.php -->
+<!-- END template-parts/favicon.php -->

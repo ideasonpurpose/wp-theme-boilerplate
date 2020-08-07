@@ -15,7 +15,7 @@
 
   @if $min {
     @if $type == max {
-        $min: $min - 1px;
+      $min: $min - 1px;
     }
 
     @media ( #{$type}-width: $min ) {

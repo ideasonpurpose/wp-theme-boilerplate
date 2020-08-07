@@ -1,7 +1,21 @@
-html {
-  color: $black;
-}
+/**
+ * Base
+ */
 
-a {
-  color: blue;
+body {
+  @extend .sans;
+
+  // Prevent horizontal scrolling
+  width: 100%;
+  overflow-x: hidden;
+
+  // Prevent <body> scrolling while the hamburger menu is open
+  @include mq(lg, "max") {
+    &.menu-open {
+      position: fixed;
+      left: 0;
+      right: 0;
+      overflow: hidden;
+    }
+  }
 }

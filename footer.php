@@ -1,4 +1,3 @@
-
 <!-- START footer.php -->
 
 <?php get_template_part('template-parts/footer'); ?>

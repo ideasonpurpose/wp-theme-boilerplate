@@ -1,15 +1,14 @@
 <!-- START template-parts/single.php -->
 
 <main>
-  <article class="post">
+  <article class="wrapper article">
 
-    <h1>
-      <a href="<?= get_post_type_archive_link($post->post_type) ?>">
-        <?php the_title() ?>
-      </a>
-    </h1>
+    <header>
+      <?= the_category(); ?>
+      <h1><?php get_the_title() ?></h1>
+    </header>
 
-    <section class="editorial wrapper">
+    <section class="editorial">
       <?php the_content(); ?>
     </section>
 

@@ -7,12 +7,30 @@
 
   // Mixins
   "mixins/breakpoint",
+  "mixins/columns",
+  "mixins/rows",
 
   // Base styles
   "base/reset",
-  "base/base"
+  "base/fonts",
+  "base/typography",
+  "base/utilities",
+  "base/base",
 
-  // Layouts
+  // WP specific
+  "wp/wp-logged-in",
 
   // Modules
+  "modules/main",
+  "modules/wrapper",
+  "modules/header",
+  "modules/header__menu",
+  "modules/header__menu-button",
+  "modules/footer",
+  "modules/editorial"
+
+  // WP Editor colors. Do not move these styles elsewhere
+  // MUST be placed at the end of the import list.
+  // "wp/wp-editor-colors"
 ;
+
