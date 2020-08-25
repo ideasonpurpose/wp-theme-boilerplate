@@ -3,7 +3,7 @@
  */
 
 // require('../sass/main.scss')
-// require('../js/modules/share.js');
+require('../js/modules/share.js');
 require('../js/modules/menu.js');
 
 console.log('JS Loaded');

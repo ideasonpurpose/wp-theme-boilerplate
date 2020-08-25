@@ -6,6 +6,8 @@
     <header>
       <?= the_category(); ?>
       <h1><?php get_the_title() ?></h1>
+
+      <?php get_template_part('template-parts/components/sharebar'); ?>
     </header>
 
     <section class="editorial">

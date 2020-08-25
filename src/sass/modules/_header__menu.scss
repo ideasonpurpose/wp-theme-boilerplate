@@ -1,3 +1,7 @@
+/**
+ * Header Menu
+ */
+
 .header__menu {
   @include mq(lg, "max") {
     position: fixed;
