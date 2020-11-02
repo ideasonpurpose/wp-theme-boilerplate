@@ -23,12 +23,11 @@ if (!is_user_logged_in() && !is_404()) {
 }
 
 /**
- * Find pages using this template. If more than one page is assigned, a random page will be used.
+ * Collect all pages using this template. If more than one page is returned, we'll display one at random.
  */
 $args = [
-    'posts_per_page' => 1,
+    'posts_per_page' => -1,
     'post_type' => 'page',
-    'orderby' => 'rand',
     'meta_query' => [
         [
             'key' => '_wp_page_template',
@@ -42,6 +41,14 @@ $pageQuery = new \WP_Query($args);
  * Use $pageQuery or a synthetic $post object to populate page title and content
  */
 if ($pageQuery->have_posts()) {
+    /**
+     * Some hosts including WP Engine disable MySQL's `ORDER BY RAND()` option since it
+     * can be extremely burdensome with larger tables.
+     * @link https://wpengine.com/support/about-order-by-rand/
+     *
+     * Instead, we just shuffle the returned collection of posts then use the first one.
+     */
+    shuffle($pageQuery->posts); // some hosts disable MySQL rand() queries
     $pageQuery->the_post();
 } else {
     $fakePost = new \stdClass();
