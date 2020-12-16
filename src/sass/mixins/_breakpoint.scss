@@ -13,7 +13,7 @@
 @mixin mq($name, $type: min) {
   $min: breakpoint-min($name);
 
-  @if $min {
+  @if ($min > 0) {
     @if $type == max {
       $min: $min - 1px;
     }
