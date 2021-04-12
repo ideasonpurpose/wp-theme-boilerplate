@@ -23,7 +23,7 @@ if (array_key_exists($menu_key, $menu_locations) && $menu_locations[$menu_key] !
   <nav class="header__container wrapper">
     <div class="header__bar">
       <a class="header__logo" href="<?= bloginfo('url') ?>">
-        <?php echo file_get_contents(get_template_directory_uri() . "/dist/images/svg/site-logo.svg"); ?>
+        <?= $SVG->siteLogo ?>
       </a>
 
       <button type="button" class="header__menu-button js-toggle-menu">

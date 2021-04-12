@@ -14,8 +14,8 @@ if ($page_count <= 1) {
  * HTML Snippets
  */
 $fillerSnippet = '<span class="page-numbers is-disabled">...</span>';
-$edgeSnippet = '<a class="pagination__edge %s" href="%s"><span class="arrow">'. $SVG->get('arrow-right') .'</span></a>';
-$edgeSnippetDisabled = '<span class="pagination__edge is-disabled %s"><span class="arrow">'. $SVG->get('arrow-right') .'</span></span>';
+$edgeSnippet = '<a class="pagination__edge %s" href="%s"><span class="arrow">'. $SVG->arrowRight .'</span></a>';
+$edgeSnippetDisabled = '<span class="pagination__edge is-disabled %s"><span class="arrow">'. $SVG->arrowLeft .'</span></span>';
 
 $allLinks = paginate_links([
     'type' => 'array',

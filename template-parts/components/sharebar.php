@@ -5,25 +5,25 @@
     <li>
       <a class="js--share" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink(); ?>">
         <span class="a11y">Share on Facebook</span>
-        <?php echo file_get_contents(get_template_directory_uri() . "/dist/images/svg/facebook.svg"); ?>
+        <?= $SVG->facebook ?>
       </a>
     </li>
     <li>
       <a class="js--share" href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink(); ?>&title=<?= get_the_title(); ?>">
         <span class="a11y">Share on LinkedIn</span>
-        <?php echo file_get_contents(get_template_directory_uri() . "/dist/images/svg/linkedin.svg"); ?>
+        <?= $SVG->linkedin ?>
       </a>
     </li>
     <li>
       <a href="https://twitter.com/intent/tweet?url=<?= get_permalink(); ?>" class="js--share">
         <span class="a11y">Share on Twitter</span>
-        <?php echo file_get_contents(get_template_directory_uri() . "/dist/images/svg/twitter.svg"); ?>
+        <?= $SVG->twitter ?>
       </a>
     </li>
     <li>
       <a href="mailto:?subject=<?= get_the_title(); ?>&body=<?= get_permalink(); ?>">
         <span class="a11y">Share on Twitter</span>
-        <?php echo file_get_contents(get_template_directory_uri() . "/dist/images/svg/email.svg"); ?>
+        <?= $SVG->email ?>
       </a>
     </li>
   </ul>
