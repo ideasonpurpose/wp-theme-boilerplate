@@ -1,7 +1,7 @@
 <?php
 
 $portrait_src = wp_get_attachment_image_src(get_post_thumbnail_id($post), 'large');
-$portrait_src = $portrait_src[0];
+$portrait_src = is_array($portrait_src) ? $portrait_src[0] : false;
 
 /**
  * Note: `get_the_terms()` returns an array or `false` if there are no terms.
@@ -21,16 +21,18 @@ $terms = array_map(function ($term) {
 <div class="col-12 col-md-6 card">
 
   <a href="<?= get_the_permalink() ?>">
+    <?php if ($portrait_src): ?>
     <div class="card__image" style="background-image: url('<?= $portrait_src ?>');"></div>
+    <?php endif; ?>
 
     <div class="card__content">
-      <?php if (count($terms)) : ?>
+      <?php if (count($terms)): ?>
         <div class="post-categories">
-          <?= implode("\n", $terms); ?>
+          <?= implode("\n", $terms) ?>
         </div>
       <?php endif; ?>
 
-      <h3 class="card__title"><?= get_the_title(); ?></h3>
+      <h3 class="card__title"><?= get_the_title() ?></h3>
     </div>
   </a>
 
