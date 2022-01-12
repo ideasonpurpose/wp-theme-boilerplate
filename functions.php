@@ -63,13 +63,6 @@ add_action('after_setup_theme', function () {
     add_theme_support('editor-styles'); // https://developer.wordpress.org/block-editor/developers/themes/theme-support/#editor-styles
     add_theme_support('align-wide'); // https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#wide-alignment
     add_theme_support('disable-custom-colors'); // https: //wordpress.org/gutenberg/handbook/extensibility/theme-support/#disabling-custom-colors-in-block-color-palettes
-
-    // Guteberg color palette
-    // Matches sass/wp/_wp-editor-colors.scss
-    // add_theme_support('editor-color-palette', [
-    //     ['name' => 'White', 'slug' => 'white', 'color' => '#fff'],
-    //     ['name' => 'Black', 'slug' => 'black', 'color' => '#000']
-    // ]);
 });
 
 /**
