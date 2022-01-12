@@ -23,7 +23,7 @@ $iop_dev_ga = 'UA-2565788-3';
 new WP\GoogleAnalytics($client_ga_id, $iop_dev_ga);
 
 /**
- * Initialize our SVG Library for all SVGs in /images/svg
+ * Initialize our SVG Library for all SVGs in ./dist/images/svg
  */
 new WP\SVG(__DIR__ . '/dist/images/svg');
 
