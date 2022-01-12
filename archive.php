@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This is the default template of 
+ * This is the default template of
  * category, tag, date, author,
  * CPT and custom taxonomy pages.
  */

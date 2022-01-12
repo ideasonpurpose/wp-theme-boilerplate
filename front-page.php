@@ -2,14 +2,13 @@
 
 get_header();
 
-while (have_posts()) : the_post();
-
-?>
+while (have_posts()):
+    the_post(); ?>
 
 <!-- START front-page.php -->
 
 <main>
-  <section class="wrapper">
+  <section class="wrapper editorial">
     <?php the_content(); ?>
   </section>
 </main>
@@ -17,6 +16,5 @@ while (have_posts()) : the_post();
 <!-- END front-page.php -->
 
 <?php
-
 endwhile;
 get_footer();
