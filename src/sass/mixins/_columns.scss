@@ -1,21 +1,23 @@
+@use "sass:math";
+
 /*
  * Generate grid columns
  * 
  */
 
 @mixin grid-col-padding($gutter) {
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
+  padding-left: $gutter * 0.5;
+  padding-right: $gutter * 0.5;
   /*
-   * Default columns align left width smallest width
+   * Default columns align left with smallest width
    */
   flex: 0 0 auto;
 }
 
 @mixin grid-col-flex($size) {
-  width: percentage($size / $column-count);
-  max-width: percentage($size / $column-count);
-  flex: 0 0 percentage($size / $column-count);
+  width: percentage(math.div($size, $column-count));
+  max-width: percentage(math.div($size, $column-count));
+  flex: 0 0 percentage(math.div($size, $column-count));
 }
 
 // generate paddings
