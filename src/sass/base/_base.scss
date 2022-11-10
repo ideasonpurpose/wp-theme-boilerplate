@@ -2,6 +2,10 @@
  * Base
  */
 
+html {
+  scroll-behavior: smooth; // no-js jumplink smooth scroll transition
+}
+
 body {
   @extend .sans;
 
