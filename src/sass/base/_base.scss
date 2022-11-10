@@ -4,14 +4,14 @@
 
 html {
   scroll-behavior: smooth; // no-js jumplink smooth scroll transition
-}
-
-body {
-  @extend .sans;
 
   // Prevent horizontal scrolling
   width: 100%;
   overflow-x: hidden;
+}
+
+body {
+  @extend .sans;
 
   // Prevent <body> scrolling while the hamburger menu is open
   @include mq(lg, "max") {
