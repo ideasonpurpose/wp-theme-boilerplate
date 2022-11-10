@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /**
  * Header Menu button config
  */
@@ -20,13 +22,13 @@ $menuBtnAnimationDuration: 250ms;
   height: $menuBtnSize;
   vertical-align: middle;
   margin-left: 25px;
-  margin-right: -($menuBtnSize - $menuBtnLineWidth) / 2;
+  margin-right: math.div(-($menuBtnSize - $menuBtnLineWidth), 2);
   background: transparent;
   cursor: pointer;
   outline: 0;
 
   &-lines {
-    margin: ceil(-$menuBtnLineThickness/2) auto 0;
+    margin: ceil(math.div(-$menuBtnLineThickness, 2)) auto 0;
     top: 50%;
     left: 0;
     right: 0;
