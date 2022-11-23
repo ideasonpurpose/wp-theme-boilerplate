@@ -4,7 +4,7 @@ namespace ideasonpurpose;
 
 $menu_locations = get_nav_menu_locations();
 $menus = [];
-$menu_key = ['menu-footer'];
+$menu_keys = ['menu-footer'];
 foreach ($menu_keys as $menu_key) {
     /**
      * menu locations with no menu assigned return the integer 0
@@ -58,5 +58,10 @@ $copyright = str_replace('%YEAR%', date('Y'), $copyright);
     </div>
   </div>
 </footer>
+
+<?php get_template_part('template-parts/components/cookie-notice.php'); ?>
+
+
+<p class="a11y" id="extdisclaimer" aria-hidden="true">link to an external site that may or may not meet accessibility guidelines.</p>
 
 <!-- END template-parts/footer.php -->

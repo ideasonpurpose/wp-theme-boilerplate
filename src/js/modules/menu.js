@@ -1,4 +1,4 @@
-const $ = window.jQuery;
+import $ from "jquery";
 
 const $html = $('html');
 const $body = $('body');
@@ -9,9 +9,9 @@ const menuTriggerClass = '.js-toggle-menu';
 
 /**
  * Toggle Menu
- * 
+ *
  * Toggles the menuOpenClass on <body>
- * 
+ *
  * Prevents <body> from being scrolled
  * while the hamburger menu is open
  */
