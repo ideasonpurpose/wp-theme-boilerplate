@@ -8,6 +8,6 @@
 
 get_header();
 
-get_template_part('template-parts/blog');
+get_template_part('template-parts/archive', $post->post_type);
 
 get_footer();
