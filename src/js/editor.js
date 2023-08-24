@@ -1,12 +1,14 @@
-/* global wp:true */
-
 require("../sass/editor.scss");
 
-console.log("editor.js");
+import { registerBlockStyle, unregisterBlockStyle } from "@wordpress/blocks";
+import domReady from "@wordpress/dom-ready";
 
-/*
-wp.blocks.registerBlockStyle("core/paragraph", {
-  name: "intro",
-  label: "Intro"
+// registerBlockStyle("core/paragraph", {
+//   name: "intro",
+//   label: "Intro",
+// });
+
+domReady(() => {
+  unregisterBlockStyle("core/separator", "dots");
+  unregisterBlockStyle("core/separator", "wide");
 });
-*/
