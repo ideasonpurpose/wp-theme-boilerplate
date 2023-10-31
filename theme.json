@@ -15,7 +15,9 @@
         }
       ],
       "custom": true,
-      "customGradient": true
+      "customGradient": true,
+      "customDuotone": false,
+      "defaultDuotone": false
     },
     "typography": {
       "dropCap": false,
